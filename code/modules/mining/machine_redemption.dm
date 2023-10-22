@@ -63,6 +63,7 @@
 	materials = null
 	return ..()
 
+// Towelstation addition - Readded ORM upgrades
 /obj/machinery/mineral/ore_redemption/RefreshParts()
 	var/point_upgrade_temp = 1
 	var/ore_multiplier_temp = 1
@@ -73,6 +74,7 @@
 	point_upgrade = point_upgrade_temp
 	ore_multiplier = round(ore_multiplier_temp, 0.01)
 
+// Towelstation edit - Readded examine text for upgrades
 /obj/machinery/mineral/ore_redemption/examine(mob/user)
 	. = ..()
 	if(in_range(user, src) || isobserver(user))
